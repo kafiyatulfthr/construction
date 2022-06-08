@@ -1,0 +1,79 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Survey Lapangan {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        
+        <!-- {% include 'includes/preloader.html' %} -->
+
+        <!-- Hero -->
+        <div class="section-header pb-6 bg-primary text-white">
+            <div class="container">
+                <h2 class="mb-4">Survey Lapangan</h3>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-6 col-xl-6">
+                        <div class="mb-4">
+                            <label for="exampleInputEmail6">Request Id</label>
+                            <input type="number" class="form-control" id="req-id" required>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-6">
+                        <div class="mb-4">
+                            <label for="exampleInputEmail6">Departemen</label>
+                            <input type="text" class="form-control" id="dept" required>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-tertiary" type="button">Cari
+                    <span class="ms-1"><span class="fas fa-search"></span></span>
+                </button>  
+            </div>
+        </div>
+        <!-- End of Hero -->
+        
+        <!--End of Title section-->
+            <div class="container">
+                <div class="row justify-content-center mt-4">
+                    <table class="table table-hover">
+                        <tr class="bg-primary text-white">
+                            <th>Request Id</th>
+                            <th>Request Date</th>
+                            <th>Nama Project</th>
+                            <th>Departemen</th>
+                            <th>Sifat Project</th>
+                            <th>Status Survey</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>102735</td>
+                            <td>22/10/2021</td>
+                            <td>Pengecatan Mesin Kalung (3 Mesin) Rantai A</td>
+                            <td>Kalung</td>
+                            <td>Reguler</td>
+                            <td><span class="badge bg-primary">Selesai Survey</span></td>
+                            <td><a href="#" class="fas fa-paper-plane"></a></td>
+                        </tr>
+                        <tr>
+                            <td>103562</td>
+                            <td>30/10/2021</td>
+                            <td>Bongkar Pasang Sekat dan Buat Rak Dinding</td>
+                            <td>Kalung</td>
+                            <td></td>
+                            <td><span class="badge bg-danger">Belum Survey</span></td>
+                            <td><a href="./survey-form.html" target="_blank" class="fas fa-paper-plane"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

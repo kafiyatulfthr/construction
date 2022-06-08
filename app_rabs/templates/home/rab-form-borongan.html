@@ -1,0 +1,160 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Form Rencana Anggaran Biaya {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        <!-- {% include 'includes/preloader.html' %} --> 
+        <!-- Hero -->
+        <div class="section-header pb-6 bg-primary text-white">
+            <div class="container">
+                <h2 class="justify-content-center mt-4">Form RAB Borongan</h3><hr>
+                    <div class="row mt-4">
+                        <div class="col-6 col-xl-6">
+                            <p><b>Request Id:</b> 103562</p>
+                            <p><b>Project:</b> Bongkar Pasang Sekat dan Buat Rak Dinding</p>
+                            <p><b>Pelaksana:</b> Soegiono (NO)</p>
+                        </div>
+                        <div class="col-6 col-xl-6">
+                            <p><b>Departemen:</b> Kalung</p>
+                            <p><b>Bagian:</b> Rantai A</p>
+                            <p><b>Kategori:</b> Proyek Baru</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-12">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail6">No. RAB</label>
+                            <input type="text" class="form-control" id="nmr_rab" required>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-6 col-xl-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail6">Jumlah Pekerja</label>
+                                <input type="number" class="form-control" id="jumlah_pekerja" required>
+                            </div>
+                        </div>
+                        <div class="col-6 col-xl-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail6">Durasi Kerja</label>
+                                <input type="number" class="form-control" id="durasi_kerja" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-xl-12">
+                            <table class="table table-bordered table-hover" id="tab_logic">
+                                <thead>
+                                    <tr >
+                                        <th class="text-center text-white">
+                                            No
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Pekerjaan
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Jumlah Pekerja
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Waktu Kerja
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Volume
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Satuan
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Harga Satuan
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Total Harga
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id='addr0'>
+                                        <td class="text-white">
+                                        1
+                                        </td>
+                                        <td>
+                                        <input type="text" name='pekerjaan'  placeholder='Pekerjaan' class="form-control"/>
+                                        </td>
+                                        <td>
+                                        <input type="text" name='jml_pekerja' placeholder='Jumlah Pekerja' class="form-control"/>
+                                        </td>
+                                        <td>
+                                        <input type="text" name='wkt_kerja' placeholder='Waktu Kerja' class="form-control"/>
+                                        </td>
+                                        <td>
+                                        <input type="text" name='volume' placeholder='Volume' class="form-control"/>
+                                        </td>
+                                        <td>
+                                        <input type="text" name='satuan' placeholder='Satuan' class="form-control"/>
+                                        </td>
+                                        <td>
+                                        <input type="text" name='harga_satuan' placeholder='Harga Satuan' class="form-control"/>
+                                        </td>
+                                        <td>
+                                        <input type="text" name='total_harga' placeholder='Total Harga' class="form-control"/>
+                                        </td>
+                                    </tr>
+                                    <tr id='addr1'></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a id="add_row" class="badge bg-info pull-left">Add Row</a><a id='delete_row' class="badge bg-danger">Delete Row</a>
+                    
+                    <div class="row mt-4">
+                        <div class="col-12 col-xl-12">
+                            <div class="mb-4">
+                                <label for="exampleInputEmail6">Lampiran Penawaran Pelaksana</label>
+                                <input type="file" class="form-control" id="penawaran" name="penawaran" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        
+                <div class="container text-center">
+                    <button class="btn btn-tertiary" type="button">Simpan
+                    </button>
+                </div>
+
+                <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+                <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+                <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+                <!------ Include the above in your HEAD tag ---------->
+
+            </div>
+        </div>
+        <!-- End of Hero -->
+        <script>
+                 $(document).ready(function(){
+                    var i=1;
+                    $("#add_row").click(function(){
+                    $('#addr'+i).html("<td class='text-white'>"+ (i+1) +"</td><td><input name='pekerjaan"+i+"' type='text' placeholder='Pekerjaan' class='form-control input-md'  /> </td><td><input  name='jml_pekerja"+i+"' type='text' placeholder='Jumlah Pekerja'  class='form-control input-md'></td><td><input  name='wkt_kerja"+i+"' type='text' placeholder='Waktu Kerja'  class='form-control input-md'></td><td><input  name='volume"+i+"' type='text' placeholder='Volume'  class='form-control input-md'></td><td><input  name='satuan"+i+"' type='text' placeholder='Satuan'  class='form-control input-md'></td><td><input  name='harga_satuan"+i+"' type='text' placeholder='Harga Satuan'  class='form-control input-md'></td><td><input  name='total_harga"+i+"' type='text' placeholder='Total Harga'  class='form-control input-md'></td>");
+
+                    $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+                    i++; 
+                });
+                    $("#delete_row").click(function(){
+                        if(i>1){
+                        $("#addr"+(i-1)).html('');
+                        i--;
+                        }
+                    });
+
+                });
+        </script>
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

@@ -1,0 +1,175 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Form Survey Lapangan {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        
+        <!-- {% include 'includes/preloader.html' %} --> 
+        <!-- Hero -->
+        <div class="section-header pb-6 bg-primary text-white">
+            <div class="container">
+                <h2 class="justify-content-center mt-4">Form Survey Lapangan</h3><hr>
+                    <div class="row mt-4">
+                        <div class="col-6 col-xl-6">
+                            <p>Request Id: 103562</p>
+                            <p>Request Date: 22/10/2021</p>
+                            <p>PIC: John Doe</p>
+                        </div>
+                        <div class="col-6 col-xl-6">
+                            <p>Departemen: Kalung</p>
+                            <p>Bagian: Rantai A</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12 col-xl-12">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail6">Nama Project</label>
+                                <input type="text" class="form-control" id="nama_project" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail6">Latar Belakang / Deskripsi</label>
+                                <textarea class="form-control" id="desc_project" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail6">Hasil Survey</label>
+                                <textarea class="form-control" id="hasil_survey" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-xl-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail6">Observer</label>
+                                <input type="text" class="form-control" id="observer" required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail6">Foto Area Survey</label>
+                            <input type="file" class="form-control" id="foto_area_survey" name="foto_area_survey" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="row mt-4">
+                        <hr>
+                        <div class="mb-3">
+                            <span class="h6 fw-bold">Tipe Pekerjaan untuk Resiko Tinggi</span>
+                        </div>
+                        <div class="col-12 col-md-4 col-xl-4">
+                                <!-- Checkboxes -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Pekerjaan Panas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        Listrik (Arus Besar)
+                                    </label>
+                                </div>    
+                        </div>
+                        <div class="col-12 col-md-4 col-xl-4">
+                                <!-- Checkboxes -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                    <label class="form-check-label" for="defaultCheck3">
+                                        Ketinggian
+                                    </label>
+                                </div> 
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Pekerjaan Galian
+                                    </label>
+                                </div>  
+                        </div>
+                        <div class="col-12 col-md-4 col-xl-4">
+                                <!-- Checkboxes -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        Alat Berat
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                    <label class="form-check-label" for="defaultCheck3">
+                                        Ruang Terbatas
+                                    </label>
+                                </div>     
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <hr>
+                        <div class="col-3 col-xl-3">
+                            <div class="mb-4">
+                                <!-- Radio -->
+                            <fieldset>
+                                <legend class="h6">Kategori</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                        value="option1">
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Renovasi
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                        value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Proyek Baru
+                                    </label>
+                                </div>
+                                <!-- End of Radio -->  
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-3 col-xl-3">
+                            <div class="mb-4">
+                                <!-- Radio -->
+                            <fieldset>
+                                <legend class="h6">Sifat Pekerjaan</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                        value="option1">
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Reguler
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                        value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Urgent
+                                    </label>
+                                </div>
+                                <!-- End of Radio -->  
+                            </div>
+                        </div>
+                    </div>
+                        
+                <div class="container text-center">
+                    <button class="btn btn-tertiary" type="button">Simpan
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- End of Hero -->
+
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

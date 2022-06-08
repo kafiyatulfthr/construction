@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- Primary Meta Tags -->
+<title>
+    Construction Management | QMS
+</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="title" content="Pixel - Free Bootstrap 5 UI Kit">
+<meta name="author" content="Themesberg">
+<meta name="description" content="Open source and free Bootstrap 5 UI Kit featuring 80 UI components, 5 example pages, and a Gulp and Sass workflow.">
+<link rel="canonical" href="https://appseed.us/apps/flask-apps/flask-pixel-bootstrap-uikit">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://demo.themesberg.com/pixel-bootstrap-5-ui-kit">
+<meta property="og:title" content="Pixel - Free Bootstrap 5 UI Kit">
+<meta property="og:description" content="Open source and free Bootstrap 5 UI Kit featuring 80 UI components, 5 example pages, and a Gulp and Sass workflow.">
+<meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/pixel-lite-preview.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://demo.themesberg.com/pixel-bootstrap-5-ui-kit">
+<meta property="twitter:title" content="Pixel - Free Bootstrap 5 UI Kit">
+<meta property="twitter:description" content="Open source and free Bootstrap 5 UI Kit featuring 80 UI components, 5 example pages, and a Gulp and Sass workflow.">
+<meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/pixel-lite-preview.jpg">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="120x120" href="/static/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/static/assets/img/favicon/site.webmanifest">
+<link rel="mask-icon" href="/static/assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Fontawesome -->
+<link type="text/css" href="/static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+<!-- Pixel CSS -->
+<link type="text/css" href="/static/assets/css/pixel.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    {% include 'includes/navigation.html' %}
+
+    <main>
+
+        <!-- {% include 'includes/preloader.html' %} -->
+
+        <!-- Hero -->
+        <section class="section-header bg-secondary text-white">
+            <div class="container">
+               <div class="row justify-content-between align-items-center">
+                    <div class="col-12 col-md-5 d-none d-md-block text-center"><img src="/static/assets/img/illustrations/project.svg" alt=""></div>
+                    <div class="col-12 col-md-7 col-lg-6 text-center text-md-left">
+                        <h1 class="display-2 mb-4">Ask Whatever <br class="d-none d-md-inline">You Want to Fix</h1>
+                        <p class="lead mb-4 text-muted">We can help you build and maintain your needs.<br>Connect with us through the section below.</p>
+                        <a href="#request" class="btn btn-tertiary mb-3 mt-2 me-2 me-md-3 animate-up-2"><span
+                            class="fas fa-th-large me-2"></span> <span class="d-none d-md-inline">Request Now</span></a>
+                    </div>
+                </div>
+            </div>
+            <figure class="position-absolute bottom-0 left-0 w-100 d-none d-md-block mb-n2">
+               <svg class="fill-white" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 43.4" style="enable-background:new 0 0 1920 43.4;" xml:space="preserve">
+                  <path d="M0,23.3c0,0,405.1-43.5,697.6,0c316.5,1.5,108.9-2.6,480.4-14.1c0,0,139-12.2,458.7,14.3 c0,0,67.8,19.2,283.3-22.7v35.1H0V23.3z"></path>
+               </svg>
+            </figure>
+        </section>
+        <!-- End of Hero section -->
+
+        <section class="section section-md ">
+            <div class="container">
+                <!-- SCRIPTS UNTUK TAB -->
+                <script src="{{ url_for('static', filename='assets/js/jquery-3-6-0.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='assets/js/bootstrap-3-4-1.min.js') }}"></script>
+                <!-- END OF SCRIPTS UNTUK TAB -->
+                <h2 class="fw-bold mb-4">Project Board</h2>
+                <div class="col-12 mb-4">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a href="#tab1" class="nav-link active" data-toggle="tab">On Progress</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#tab2" class="nav-link" data-toggle="tab">Completed</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#tab3" class="nav-link" data-toggle="tab">Cancelled</a>
+                        </li>
+                    </ul>
+                    <script>
+                        $(function () {
+                            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                $('a[data-toggle="tab"]').removeClass('active');
+                                $('a[data-toggle="tab"]').addClass('nav-item');
+                                $(this).removeClass('nav-item');
+                                $(this).addClass('active');
+                            });
+                        });
+                    </script>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12">
+                                    <div class="mb-5">
+                                        <table class="table">
+                                            <tr>
+                                                <th id="req-id">Request Id</th>
+                                                <th id="project-name">Project</th>
+                                                <th id="dept">Departemen</th>
+                                                <th id="status">Status</th>
+                                            </tr>
+                                            <tr>
+                                                <td>103562</td>
+                                                <td>Bongkar Pasang Sekat dan Buat Rak Dinding</td>
+                                                <td>Kalung</td>
+                                                <td><a class="badge bg-warning">On Progress</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>103564</td>
+                                                <td>Penyekatan Partisi untuk Ubah Ruang AC</td>
+                                                <td>Kalung</td>
+                                                <td><a class="badge bg-warning">On Progress</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12">
+                                    <div class="mb-5">
+                                        <table class="table">
+                                            <tr>
+                                                <th id="req-id">Request Id</th>
+                                                <th id="project-name">Project</th>
+                                                <th id="dept">Departemen</th>
+                                                <th id="status">Status</th>
+                                            </tr>
+                                            <tr>
+                                                <td>102735</td>
+                                                <td>Pengecatan Mesin Kalung (3 Mesin) Rantai A</td>
+                                                <td>Kalung</td>
+                                                <td><a class="badge bg-success">Completed</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab3"> 
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12">
+                                    <div class="mb-5">
+                                        <table class="table">
+                                            <tr>
+                                                <th id="req-id">Request Id</th>
+                                                <th id="project-name">Project</th>
+                                                <th id="dept">Departemen</th>
+                                                <th id="status">Status</th>
+                                            </tr>
+                                            <tr>
+                                                <td>103112</td>
+                                                <td>Bongkar Pasang Aluminium</td>
+                                                <td>Kalung</td>
+                                                <td><a class="badge bg-danger">Cancelled</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section-lg bg-secondary">
+            <div class="row justify-content-center text-center text-white">
+                <div class="col-lg-10 col-xl-12">
+                    <h2 class="fw-light mb-4">WCAG 2.1 accessible <span class="fw-bold">color scheme</span></h2>
+                    <p class="lead">
+                        We've enhanced Bootstrap’s color settings <br> to comply with the latest accessibility
+                        standards
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section section-sm pb-0 mb-n4" id="request">    
+            <div class="row justify-content-center">
+                <h3 class="text-center">Request Disini</h3>
+            </div>
+        </div>
+        <div class="section section-md">
+            <div class="container">
+                <div class="row justify-content-center mt-4">
+                    <div class="col-12 col-xl-12 col-lg-8">
+                        <div class="mb-4">
+                            <label for="exampleInputEmail6">Nama Project</label>
+                            <input type="text" class="form-control" id="nama_project" required>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-6 col-lg-8">
+                        <div class="mb-4">
+                            <label for="exampleInputEmail6">Departemen</label>
+                            <input type="text" class="form-control" id="dept" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleInputEmail6">Bagian</label>
+                            <input type="text" class="form-control" id="dept_bagian" required>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-6 col-lg-8">
+                        <div class="mb-4">
+                            <label for="exampleInputEmail6">PIC</label>
+                            <input type="text" class="form-control" id="pic" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleInputEmail6">Ext.</label>
+                            <input type="number" class="form-control" id="ext" required>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-12 col-lg-8">
+                        <div class="mb-4">
+                            <label for="exampleInputEmail6">Latar Belakang/Deskripsi</label>
+                            <textarea class="form-control" id="desc_project" required></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-12 col-lg-8">
+                        <div class="mb-4">
+                            <label for="exampleInputEmail6">Foto Area / Gambar Kerja</label>
+                            <input type="file" class="form-control" id="foto_area" name="foto_area" required>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-lg btn-primary" type="button">
+                            Send
+                            <span class="ms-1"><span class="fas fa-paper-plane"></span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include 'includes/footer.html' %}
+
+    {% include 'includes/scripts.html' %}
+
+</body>
+</html>
