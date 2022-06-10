@@ -1,0 +1,249 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Form Job Safety Analysis {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        <!-- {% include 'includes/preloader.html' %} --> 
+        <!-- Hero -->
+        <div class="section-header pb-6 bg-primary text-white">
+            <div class="container">
+                <h2 class="justify-content-center mt-4">Form JSA</h3><hr>
+                    <div class="row mt-4">
+                        <div class="col-6 col-xl-6">
+                            <p><b>Request Id:</b> 103562</p>
+                            <p><b>Project:</b> Bongkar Pasang Sekat dan Buat Rak Dinding</p>
+                        </div>
+                        <div class="col-6 col-xl-6">
+                            <p><b>Departemen:</b> Kalung</p>
+                            <p><b>Bagian:</b> Rantai A</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail6">Tanggal JSA</label>
+                            <input type="date" class="form-control" id="tgl_jsa" required>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <label for="exampleInputEmail6">APD / Peralatan Keselamatan</label>
+                        <div class="col-6 col-xl-3">
+                            <!-- Checkboxes -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Helm Keselamatan
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                <label class="form-check-label" for="defaultCheck2">
+                                    Kacamata
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                <label class="form-check-label" for="defaultCheck3">
+                                    Goggle
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                <label class="form-check-label" for="defaultCheck4">
+                                    Tameng Muka
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                <label class="form-check-label" for="defaultCheck4">
+                                    Kap Las
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6 col-xl-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Masker Kain
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                <label class="form-check-label" for="defaultCheck2">
+                                    Masker Karbon/Kimia
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                <label class="form-check-label" for="defaultCheck3">
+                                    Sarung Tangan Katun
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                <label class="form-check-label" for="defaultCheck4">
+                                    Sarung Tangan Karet
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                <label class="form-check-label" for="defaultCheck4">
+                                    Sarung Tangan Kulit
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6 col-xl-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Earplug/Earmuff
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                <label class="form-check-label" for="defaultCheck2">
+                                    Sepatu Keselamatan
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                <label class="form-check-label" for="defaultCheck3">
+                                    Full Body Harness
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                <label class="form-check-label" for="defaultCheck4">
+                                    APAR
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                <label class="form-check-label" for="defaultCheck4">
+                                    Garis Tanda Bahaya
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6 col-xl-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Rambu Keselamatan
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                <label class="form-check-label" for="defaultCheck2">
+                                    LOTO
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                <label class="form-check-label" for="defaultCheck3">
+                                    Radio Telekomunikasi
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                <label class="form-check-label" for="defaultCheck4">
+                                    Jaring/Tali Keselamatan
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-xl-12">
+                            <hr>
+                            <!-- <label for="exampleInputEmail6">Rincian Biaya</label> -->
+                            <table class="table " id="tab_logic">
+                                <thead>
+                                    <tr >
+                                        <th class="text-center text-white">
+                                            No
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Langkah Kerja Dasar
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Sumber Bahaya
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Potensi
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Konsekuensi
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Pengendalian
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id='addr0'>
+                                        <td class="text-white">
+                                        1
+                                        </td>
+                                        <td>
+                                        <textarea name='langkah_kerja'  placeholder='Langkah Kerja Dasar' class="form-control"></textarea>
+                                        </td>
+                                        <td>
+                                        <textarea name='sumber_bahaya' placeholder='Sumber Bahaya' class="form-control"></textarea>
+                                        </td>
+                                        <td>
+                                        <textarea name='potensi' placeholder='Potensi' class="form-control"></textarea>
+                                        </td>
+                                        <td>
+                                        <textarea name='konsekuensi' placeholder='Konsekuensi' class="form-control"></textarea>
+                                        </td>
+                                        <td>
+                                        <textarea name='pengendalian' placeholder='Pengendalian' class="form-control"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr id='addr1'></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a id="add_row" class="badge bg-info pull-left">Add Row</a><a id='delete_row' class="badge bg-danger">Delete Row</a>
+                         
+                <div class="container text-center">
+                    <button class="btn btn-tertiary" type="button">Simpan
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- End of Hero -->
+        <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
+        <script>
+            $(document).ready(function(){
+                    var i=1;
+                    $("#add_row").click(function(){
+                    $('#addr'+i).html("<td class='text-white'>"+ (i+1) +"</td><td><textarea name='langkah_kerja"+i+"' placeholder='Langkah Kerja Dasar' class='form-control input-md'></textarea></td><td><textarea name='sumber_bahaya"+i+"' placeholder='Sumber Bahaya'  class='form-control input-md'></textarea></td><td><textarea name='potensi"+i+"' placeholder='Potensi'  class='form-control input-md'></textarea></td><td><textarea  name='konsekuensi"+i+"' placeholder='Konsekuensi'  class='form-control input-md'></textarea></td><td><textarea  name='pengendalian"+i+"' placeholder='Pengendalian'  class='form-control input-md'></textarea></td>");
+
+                    $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+                    i++; 
+                });
+                    $("#delete_row").click(function(){
+                        if(i>1){
+                        $("#addr"+(i-1)).html('');
+                        i--;
+                        }
+                    });
+
+                });
+        </script>
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
