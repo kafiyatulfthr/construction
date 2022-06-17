@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Rencana Anggaran Biaya {% endblock %} 
+{% block title %} Surat Perizinan {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -14,18 +14,17 @@
         <!-- Hero -->
         <div class="section-header pb-6 bg-primary text-white">
             <div class="container">
-                <h2 class="mb-4">Rencana Anggaran Biaya (RAB)</h3>
-                <div class="row justify-content-center mt-4">
+                <h2 class="mb-4">Surat Izin Pekerjaan Proyek</h3>
+                <div class="row mt-4">
                     <div class="col-12 col-xl-6">
                         <div class="mb-4">
                             <label for="exampleInputEmail6">Request Id</label>
                             <input type="number" class="form-control" id="req-id" required>
                         </div>
-                    </div>
-                    <div class="col-12 col-xl-6">
+                    </div><div class="col-12 col-xl-6">
                         <div class="mb-4">
                             <label for="exampleInputEmail6">No. RAB</label>
-                            <input type="text" class="form-control" id="rab-id" required>
+                            <input type="text" class="form-control" id="rab" required>
                         </div>
                     </div>
                 </div>
@@ -45,8 +44,7 @@
                             <th>No. RAB</th>
                             <th>Nama Project</th>
                             <th>Departemen</th>
-                            <th>Total Anggaran</th>
-                            <th>Status RAB</th>
+                            <th>Status Izin</th>
                             <th>Action</th>
                         </tr>
                         <tr>
@@ -54,27 +52,16 @@
                             <td>QMS/10-21/EK/014</td>
                             <td>Pengecatan Mesin Kalung (3 Mesin) Rantai A</td>
                             <td>Kalung</td>
-                            <td>1.600.000</td>
-                            <td><span class="badge bg-primary">Selesai Dibuat</span></td>
+                            <td><span class="badge bg-danger">Belum Dibuat</span></td>
                             <td><a href="#" class="fas fa-paper-plane"></a></td>
                         </tr>
                         <tr>
                             <td>103562</td>
-                            <td></td>
-                            <td>Bongkar Pasang Sekat dan Buat Rak Dinding</td>
-                            <td>Kalung</td>
-                            <td></td>
-                            <td><span class="badge bg-danger">Belum Dibuat</span></td>
-                            <!-- <td><a href="./rab-form.html" target="_blank" class="fas fa-paper-plane"></a></td> -->
-                            <td>
-                                <a href="#" class="dropdown-toggle fas fa-paper-plane" id="formDropdown" aria-expanded="false" data-bs-toggle="dropdown"></a>
-                                <div class="dropdown-menu" aria-labelledby="formDropdown">
-                                    <ul class="list-style-none">
-                                        <li><a class="dropdown-item fw-bold" href="./rab-form-borongan.html">RAB Borongan</a></li>
-                                        <li><a class="dropdown-item fw-bold" href="./rab-form-harian.html">RAB Harian</a></li>
-                                    </ul>
-                                </div>   
-                            </td>
+                            <td>QMS/09-21/NO/007</td>
+                            <td>Bongkar Pasang Aluminium</td>
+                            <td>Workshop</td>
+                            <td><span class="badge bg-primary">Selesai Dibuat</span></td>
+                            <td><a href="./si-form.html" class="fas fa-paper-plane"></a></td>
                         </tr>
                     </table>
                 </div>
