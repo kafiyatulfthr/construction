@@ -1,0 +1,100 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Complete Project {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        <!-- {% include 'includes/preloader.html' %} --> 
+        <!-- Hero -->
+        <div class="section-header pb-6 bg-primary text-white">
+            <div class="container">
+                <h4 class="justify-content-center mt-4">Laporan Pekerjaan Proyek Selesai</h4><hr>
+                    <div class="row mt-4">
+                        <div class="col-12 col-xl-12">
+                            <b>Cat Meja Mesin 3 Unit Rantai A</b>
+                            <p><b>No. RAB:</b> QMS/07-21/EK/018</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mt-4">
+                        <div class="col-6 col-xl-6">
+                            <p>Departemen:<b> Kalung</b></p>
+                            <p>Bagian:<b> Rantai A</b></p>
+                            <p>Durasi Kerja:<b> 6</b></p>
+                            <p>Jumlah Pekerja:<b> 1</b></p>
+                            <p>Risiko Pekerjaan:<b> Rendah</b></p>
+                            <p>Kategori Pekerjaan:<b> Renovasi</b></p>
+                            <p>Jenis Pekerjaan:<b> Harian</b></p>
+                            <p>Sifat Pekerjaan:<b> Reguler</b></p>
+                            
+                        </div>
+                        <div class="col-6 col-xl-6">
+                            <h4>History</h4>
+                            <label>Jumlah Pekerja:</label>
+                            <input type="number" class="form-control" id="jumlah_pekerja" required>
+                            <label>Durasi Kerja:</label>
+                            <input type="number" class="form-control" id="durasi_kerja" required>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-12 col-xl-12">
+                        <h3>Detail Pekerjaan</h3>
+                        <div class="mb-3">
+                            <table class="table text-white">
+                                <tr>
+                                    <th>Nama Pekerjaan</th>
+                                    <th>Tanggal Selesai</th>
+                                </tr>
+                                <tr>
+                                    <td>Pengecatan 3 Buah Mesin Kalung</td>
+                                    <td>03/08/2021</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <h3>Anggaran</h3>
+                        <div class="col-12 col-xl-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail6">Biaya Per Hari</label>
+                                <input type="number" class="form-control" id="biaya_perhari" required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail6">Biaya Tambahan</label>
+                                <input type="number" class="form-control" id="biaya_tambahan">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-12">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail6">Total Anggaran</label>
+                            <input type="number" class="form-control" id="total_anggaran" disabled>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <div class="col-12 col-xl-12">
+                        <div class="mb-3">
+                            <label>Keterangan</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+                    </div>
+            </div>
+            <div class="container text-center">
+                <button class="btn btn-tertiary" type="button">Simpan
+                </button>
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
