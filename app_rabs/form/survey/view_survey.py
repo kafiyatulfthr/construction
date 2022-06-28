@@ -6,8 +6,8 @@ from jinja2 import TemplateNotFound
 
 @app_survey.route('/survey')
 def survey():
-  return render_template('home/survey-table.html')
+  return render_template('form/survey/survey-table.html')
 
 @app_survey.route('/add-survey')
 def add_survey():
-  return render_template('home/survey-form.html')
+  return render_template('form/survey/survey-form.html')

@@ -5,12 +5,12 @@ from jinja2 import TemplateNotFound
 
 @app_rab.route('/rab')
 def rab():
-  return render_template('home/rab-table.html')
+  return render_template('form/rab/rab-table.html')
 
 @app_rab.route('/add-rab-harian')
 def add_rab_harian():
-  return render_template('home/rab-form-harian.html')
+  return render_template('form/rab/rab-form-harian.html')
 
 @app_rab.route('/add-rab-borongan')
 def add_rab_borongan():
-  return render_template('home/rab-form-borongan.html')
+  return render_template('form/rab/rab-form-borongan.html')
