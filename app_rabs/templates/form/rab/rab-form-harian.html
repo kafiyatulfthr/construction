@@ -25,10 +25,18 @@
                             <p><b>Kategori:</b> Proyek Baru</p>
                         </div>
                     </div>
-                    <div class="col-12 col-xl-12">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail6">No. RAB</label>
-                            <input type="text" class="form-control" id="nmr_rab" required>
+                    <div class="row">
+                        <div class="col-6 col-xl-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail6">No. RAB</label>
+                                <input type="text" class="form-control" id="nmr_rab" required>
+                            </div>
+                        </div>
+                        <div class="col-6 col-xl-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail6">Tanggal RAB</label>
+                                <input type="date" class="form-control" id="nmr_rab" required>
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-4">
@@ -48,7 +56,9 @@
 
                     <div class="row">
                         <div class="col-12 col-xl-12">
-                            <table class="table table-bordered table-hover" id="tab_logic">
+                            <hr>
+                            <label for="exampleInputEmail6">Rincian Biaya</label>
+                            <table class="table" id="tab_logic">
                                 <thead>
                                     <tr >
                                         <th class="text-center text-white">
@@ -99,6 +109,56 @@
                     </div>
                     <a id="add_row" class="badge bg-info pull-left">Add Row</a><a id='delete_row' class="badge bg-danger">Delete Row</a>
                     
+                    <div class="row">
+                        <div class="col-12 col-xl-12">
+                            <hr>
+                            <label for="exampleInputEmail6">Rincian Kebutuhan Material</label>
+                            <table class="table" id="tab_material">
+                                <thead>
+                                    <tr >
+                                        <th class="text-center text-white">
+                                            No
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Nama Material
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Qty
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Satuan
+                                        </th>
+                                        <th class="text-center text-white">
+                                            Total Harga
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id='materialrow0'>
+                                        <td class="text-white">
+                                        1
+                                        </td>
+                                        <td>
+                                        <input type="text" name='nama_material'  placeholder='Nama Material' class="form-control"/>
+                                        </td>
+                                        <td>
+                                        <input type="text" name='qty' placeholder='Qty' class="form-control"/>
+                                        </td>
+                                        <td>
+                                        <input type="text" name='satuan_material' placeholder='Satuan' class="form-control"/>
+                                        </td>
+                                        <td>
+                                        <input type="text" name='total_harga' placeholder='Total Harga' class="form-control"/>
+                                        </td>
+                                    </tr>
+                                    <tr id='materialrow1'></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a id="add_material" class="badge bg-info pull-left">Add Row</a><a id='delete_material' class="badge bg-danger">Delete Row</a>
+                    
+                    
                     <div class="row mt-4">
                         <div class="col-12 col-xl-12">
                             <div class="mb-4">
@@ -114,16 +174,16 @@
                     </button>
                 </div>
 
-                <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
-                <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-                <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-                <!------ Include the above in your HEAD tag ---------->
-
             </div>
         </div>
         <!-- End of Hero -->
+
+
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
         <script>
-                 $(document).ready(function(){
+            $(document).ready(function(){
                     var i=1;
                     $("#add_row").click(function(){
                     $('#addr'+i).html("<td class='text-white'>"+ (i+1) +"</td><td><input name='pekerjaan"+i+"' type='text' placeholder='Pekerjaan' class='form-control input-md'  /> </td><td><input  name='jml_pekerja"+i+"' type='text' placeholder='Jumlah Pekerja'  class='form-control input-md'></td><td><input  name='wkt_kerja"+i+"' type='text' placeholder='Waktu Kerja'  class='form-control input-md'></td><td><input  name='biaya_per_hari"+i+"' type='text' placeholder='Biaya Per Hari'  class='form-control input-md'></td><td><input  name='total_harga"+i+"' type='text' placeholder='Total Harga'  class='form-control input-md'></td>");
@@ -140,6 +200,25 @@
 
                 });
         </script>
+        <script>
+            $(document).ready(function(){
+                    var i=1;
+                    $("#add_material").click(function(){
+                    $('#materialrow'+i).html("<td class='text-white'>"+ (i+1) +"</td><td><input name='nama_material"+i+"' type='text' placeholder='Nama Material' class='form-control input-md'  /> </td><td><input  name='qty"+i+"' type='text' placeholder='Qty'  class='form-control input-md'></td><td><input  name='satuan_material"+i+"' type='text' placeholder='Satuan'  class='form-control input-md'></td><td><input  name='total_harga"+i+"' type='text' placeholder='Total Harga'  class='form-control input-md'></td>");
+
+                    $('#tab_material').append('<tr id="materialrow'+(i+1)+'"></tr>');
+                    i++; 
+                });
+                    $("#delete_material").click(function(){
+                        if(i>1){
+                        $("#materialrow"+(i-1)).html('');
+                        i--;
+                        }
+                    });
+
+                });
+        </script>
+
     </main>
 
 {% endblock content %}

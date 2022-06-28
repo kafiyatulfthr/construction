@@ -1,0 +1,257 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Form Job Safety Analysis {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        <!-- {% include 'includes/preloader.html' %} --> 
+        <div class="section section-md">
+            <div class="container">
+                <div class="row justify-content-center mt-4">
+                    <div class="col-12 col-md-8 text-center">
+                        <h5 class=" mb-4">Surat Izin Pekerjaan Proyek</h5>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                        <!--Accordion-->
+                        <div class="accordion" id="accordionExample1">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        A. Jenis Pekerjaan
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample1">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label>Risiko:</label>
+                                                <p>Tinggi</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <label>Tipe Pekerjaan:</label>
+                                                <p>Ketinggian</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        B. Informasi Pemohon Pekerjaan
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample1">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label>No. RAB:</label>
+                                                <p>QMS/09-21/NO/007</p>
+                                            </div> 
+                                            <div class="col-4">
+                                                <label>Lokasi:</label>
+                                                <p>Workshop</p>
+                                                <label>Pimpinan Departemen:</label>
+                                                <p>Sugianto Jojok</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <label>PIC:</label>
+                                                <p>Ferry</p>
+                                                <label>Ext:</label>
+                                                <p>1722</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                       C. Informasi Pelaksana Pekerjaan
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                    data-bs-parent="#accordionExample1">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label>Pimpinan Pelaksana:</label>
+                                                <p>Soegiono</p>
+                                                <label>Contact Person:</label>
+                                                <p>085764532345</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <label>Pengawas Pekerjaan:</label>
+                                                <p>Andrew Ichaman N</p>
+                                                <label>Contact Person:</label>
+                                                <p>1543</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <label>Departemen Pelaksana:</label>
+                                                <p>Workshop</p>
+                                                <label>Perusahaan Pelaksana:</label>
+                                                <p>PT Untung Bersama Sejahtera</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                       D. Informasi Personil
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample1">
+                                    <div class="accordion-body">
+                                        <table class="table table-hover">
+                                            <tr>
+                                                <th>Daftar Personil</th>
+                                                <th>Jumlah Personil</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Tukang</td>
+                                                <td>4</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                       E. Perlengkapan Kerja
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#accordionExample1">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label>Peralatan Pekerjaan</label>
+                                                <p></p>
+                                            </div>
+                                            <div class="col-6">
+                                                <label>Bahan</label>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                      F. Analisis Keselamatan Kerja
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    data-bs-parent="#accordionExample1">
+                                    <div class="accordion-body">
+                                        <table class="table table-hover">
+                                            <tr>
+                                                <th>Aktivitas</th>
+                                                <th>Potensi Bahaya</th>
+                                                <th>Pengendalian Potensi Bahaya</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Bongkar aluminium untuk mengeluarkan mesin</td>
+                                                <td>Jatuh dari ketinggian, terkena palu dan bor tangan, kejatuhan material (almini)</td>
+                                                <td>Sepatu keselamatan, sarung tangan, masker, helm keselamatan, full body harness</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pasang aluminium kembali</td>
+                                                <td>Jatuh dari ketinggian, terkena palu dan bor tangan, kejatuhan material (almini)</td>
+                                                <td>Sepatu keselamatan, sarung tangan, masker, helm keselamatan, full body harness</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                       G. Alat Pelindung Diri dan Peralatan Keselamatan
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                                    data-bs-parent="#accordionExample1">
+                                    <div class="accordion-body">
+                                        <table class="table table-hover">
+                                            <tr>
+                                                <th>APD/Peralatan Keselamatan</th>
+                                                <th>Jumlah</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Helm Keselamatan</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Masker Kain</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sarung Tangan Katun</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sepatu Keselamatan</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Full Body Harness</td>
+                                                <td>4</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingEight">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                       H. Pengesahan Izin Pekerjaan
+                                    </button>
+                                </h2>
+                                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                                    data-bs-parent="#accordionExample1">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label>Start Time:</label>
+                                                <p>08:00:00</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <label>End Time:</label>
+                                                <p>17:00:00</p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Accordion-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Hero -->
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
