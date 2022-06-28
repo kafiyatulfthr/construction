@@ -2,13 +2,7 @@ from flask import render_template, request, redirect, url_for
 from app_rabs.home import app_home
 from jinja2 import TemplateNotFound
 
-@app_home.route('/')
-def route_default():
-  return redirect(url_for('app_home.login'))
-  
-@app_home.route('/login')
-def login():
-    return render_template('home/sign-in.html')
+
   
 @app_home.route('/home')
 def home():

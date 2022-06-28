@@ -34,14 +34,13 @@
                             </div>
                             <form method="post" action="" class="mt-4">
 
-                                {{ form.hidden_tag() }}
 
                                 <!-- Form -->
                                 <div class="form-group mb-4">
                                     <label for="email">Username</label>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon1"><span class="fas fa-user"></span></span>
-                                        {{ form.username(class="form-control") }}
+                                        <input type="text" class="form-control" name="nik" placeholder="NIK" required>
                                     </div>  
                                 </div>
                                 <!-- End of Form -->
@@ -51,13 +50,13 @@
                                         <label for="password">Password</label>
                                         <div class="input-group">
                                             <span class="input-group-text" id="basic-addon2"><span class="fas fa-unlock-alt"></span></span>
-                                            {{ form.password(class="form-control", type="password") }}
+                                            <input type="password" class="form-control" name="password" placeholder="Password" required>
                                         </div>  
                                     </div>
                                     <!-- End of Form -->
                                     <div class="d-flex justify-content-between align-items-center mb-4">
                                         <div><a class="text-left">Don't Have an Account?</a></div>
-                                        <div><a href="{{ url_for('register') }}" class="text-right">Register</a></div>
+                                        <div><a href="#" class="text-right">Register</a></div>
                                     </div>
                                 </div>
                                 <div class="d-grid">

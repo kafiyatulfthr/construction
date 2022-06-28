@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Surat Perizinan {% endblock %} 
+{% block title %} Job Safety Analysis {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -14,17 +14,12 @@
         <!-- Hero -->
         <div class="section-header pb-6 bg-primary text-white">
             <div class="container">
-                <h2 class="mb-4">Surat Izin Pekerjaan Proyek</h3>
+                <h2 class="mb-4">Job Safety Analysis (JSA)</h3>
                 <div class="row mt-4">
-                    <div class="col-12 col-xl-6">
+                    <div class="col-6 col-xl-6">
                         <div class="mb-4">
                             <label for="exampleInputEmail6">Request Id</label>
                             <input type="number" class="form-control" id="req-id" required>
-                        </div>
-                    </div><div class="col-12 col-xl-6">
-                        <div class="mb-4">
-                            <label for="exampleInputEmail6">No. RAB</label>
-                            <input type="text" class="form-control" id="rab" required>
                         </div>
                     </div>
                 </div>
@@ -41,27 +36,32 @@
                     <table class="table table-hover">
                         <tr class="bg-primary text-white">
                             <th>Request Id</th>
-                            <th>No. RAB</th>
+                            <th>Tanggal</th>
                             <th>Nama Project</th>
                             <th>Departemen</th>
-                            <th>Status Izin</th>
+                            <th>Tipe Pekerjaan</th>
+                            <th>Status JSA</th>
                             <th>Action</th>
                         </tr>
                         <tr>
                             <td>102735</td>
-                            <td>QMS/10-21/EK/014</td>
-                            <td>Pengecatan Mesin Kalung (3 Mesin) Rantai A</td>
-                            <td>Kalung</td>
-                            <td><span class="badge bg-danger">Belum Dibuat</span></td>
+                            <td>21/09/2021</td>
+                            <td>Bongkar Pasang Aluminium</td>
+                            <td>Workshop</td>
+                            <td>Ketinggian</td>
+                            <td><span class="badge bg-primary">Selesai Dibuat</span></td>
                             <td><a href="#" class="fas fa-paper-plane"></a></td>
                         </tr>
                         <tr>
                             <td>103562</td>
-                            <td>QMS/09-21/NO/007</td>
-                            <td>Bongkar Pasang Aluminium</td>
-                            <td>Workshop</td>
-                            <td><span class="badge bg-primary">Selesai Dibuat</span></td>
-                            <td><a href="./si-form.html" class="fas fa-paper-plane"></a></td>
+                            <td></td>
+                            <td>Bongkar Pasang Sekat dan Buat Rak Dinding</td>
+                            <td>Kalung</td>
+                            <td>Ketinggian, Listrik (Arus Besar)</td>
+                            <td><span class="badge bg-danger">Belum Dibuat</span></td>
+                            <td>
+                                <a href="add-jsa" class="fas fa-paper-plane"></a>   
+                            </td>
                         </tr>
                     </table>
                 </div>
